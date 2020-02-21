@@ -43,6 +43,7 @@ Les règles ci-dessous concernent la mise à disposition par fichier CSV :
  4. Encodage en UTF8
  5. Séparateur de colonnes  : "," ou ";" mais stable dans le temps
  6. Encapsuler la valeur de chaque donnée par des double quote. Obligatoire pour les données au format chaine de caractères.
+ 
 ---
  
 ## INSEE - Base SIRENE - Données Entreprises :
@@ -135,6 +136,17 @@ Les règles ci-dessous concernent la mise à disposition par fichier CSV :
 |activitePrincipaleEtablissement|Activité principale de l'établissement pendant la période|6|Liste de codes|
 |nomenclatureActivitePrincipaleEtablissement|Nomenclature d’activité de la variable activitePrincipaleEtablissement|8|Liste de codes|
 |caractereEmployeurEtablissement|Caractère employeur de l’établissement|1|Liste de codes|
+
+## INSEE - Base SIRENE - Données Liens succession:
+
+|Nom|Libellé|Longueur|Type|
+|--|--|--|--|
+|continuiteEconomique|Indicatrice de continuité économique entre les deux établissements|5|Texte|
+|dateDernierTraitementLienSuccession|Date de traitement du lien de succession|19|Date|
+|dateLienSuccession|Date d'effet du lien de succession|10|Date|
+|siretEtablissementPredecesseur|Numéro Siret de l'établissement prédécesseur|14|Texte|
+|siretEtablissementSuccesseur|Numéro Siret de l'établissement successeur|14|Texte|
+|transfertSiege|Indicatrice de transfert de siège|5|Texte|
 
 ## DINUM - API Entreprise :
 
@@ -282,10 +294,31 @@ SUIVI|VARCHAR|Type de suivi|
 | Colonnes | Format | Commentaire |
 |--|--|--|
 
-## DGEFP - Base ALTERNANCE - Contrats Pro et Apprentissage
+## DGEFP - Base ARIANE ? - Contrats Pro  
+
+- Fréquence : mensuelle
+- Mode récupération : Minio
+- Format : CSV, séparateur ";"
+- Volume : 5 000 lignes
 
 | Colonnes | Format | Commentaire |
 |--|--|--|
+|TypeContrat|NUM|Type de contrat (liste à récupérer)|
+|NumeroEnregistrement|Texte|Numéro d'enregistrement. Format à vérifier, j'ai des doute sur la perte du 0 initial vu que les premiers caractères correspondent au numéro du département|
+|DateDebut|DD/MM/YYYY|Date de début du contrat|
+|DateRupture|DD/MM/YYYY|Date de rupture du contrat|
+|EmployeurSiret|NUM 14|SIRET de l'employeur|
+
+
+## DGEFP - Base Apprentissage
+
+| Colonnes | Format | Commentaire |
+|--|--|--|
+|Contrat DateDebut|||
+|TypeContrat|||
+|NumeroEnregistrement|||
+|Employeur Siret|||
+|DateRupture|||
 
 
 ## Les Nomenclatures :
