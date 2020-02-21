@@ -292,6 +292,7 @@ SUIVI|VARCHAR|Type de suivi|
 
 | Colonnes | Format | Commentaire |
 |--|--|--|
+| | | |
 
 ## DGEFP - Base ARIANE ? - Contrats Pro  
 
