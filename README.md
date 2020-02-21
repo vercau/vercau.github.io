@@ -44,7 +44,6 @@ Les règles ci-dessous concernent la mise à disposition par fichier CSV :
  5. Séparateur de colonnes  : "," ou ";" mais stable dans le temps
  6. Encapsuler la valeur de chaque donnée par des double quote. Obligatoire pour les données au format chaine de caractères.
  
----
  
 ## INSEE - Base SIRENE - Données Entreprises :
 
